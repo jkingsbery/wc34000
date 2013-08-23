@@ -1,0 +1,6 @@
+
+line->(label(:)(\n)) operation (;.*)\n
+operation->command operand (operand) | eq operand | global label(,label{(<#>)})+ | ascii string | source <#>+ | stab
+stab-> stab FILE string | stab GLOBVAR OFFSET=<#> TYPE=string | stab FUNCTION string | stab LOCVAR OFFSET=<#> TYPE=string 
+operand->D<#>|A<#>|(A<#>)|--(A<#>)|(A<#>)++|#<#>*|label|label(A<#>)|#<#>*(A<#>)
+string->
